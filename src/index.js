@@ -6,6 +6,8 @@
 
 
 
+
+
 const url = "https://platzi-avo.vercel.app"
 // !!!! ojo esto de arriba despues se corrigio, otra solucion que implemente fue dejar la api completa  asi: const url = "https://platzi-avo.vercel.app/api/avo" 
 // y puedes hacer otra constante con la url absoluta algo asi:  const urlAbsoluta = "https://platzi-avo.vercel.app" y cuando llames 
@@ -16,6 +18,12 @@ const url = "https://platzi-avo.vercel.app"
 
 const appNode = document.querySelector('#app')  //aqui lo que estamos haciendo es que appNose apunte al elemento en el html que con el id app
 
+appNode.addEventListener ('click', (event2) => {  //delegacion de eventos
+    if(event2.target.nodeName === 'H2'){
+        window.alert('sup2')
+
+    }
+}); 
 
 // la api para internacionalizacion se encuentra en window.Int y ponemos que que vamos a usar monedas o fechas
 const fotmarPricee = (price) => {
@@ -57,6 +65,9 @@ window   // con esto nos conectamos al servicor window.fetch
         // para poner imagen, las imagenes siempre tienen el la propiedad src osea pondriamo imagen.src 
 
     //crear titulo
+        const acctionExample = () => {
+            window.alert('sup')
+        }
         const titulo = document.createElement('h2');
         titulo.textContent = item.name         // aqui le dice que queremos que el título sea igual contenido en texto que tiene en el
         // item con el nombre name (el item hace referenca al item que pusimos en el forEach puedes poner cualquier cosa como tlacuache 
@@ -69,7 +80,7 @@ window   // con esto nos conectamos al servicor window.fetch
         // y creo que este es el mas prolijo usando clases con classNAme asi:
         titulo.className = 'NomeDeLaClase';
         // titulo.className = 'text-lg';
-
+        // titulo.addEventListener("click", acctionExample)
 
 
 
