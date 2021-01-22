@@ -18,7 +18,7 @@ const url = "https://platzi-avo.vercel.app"
 
 const appNode = document.querySelector('#app')  //aqui lo que estamos haciendo es que appNose apunte al elemento en el html que con el id app
 
-appNode.addEventListener ('click', (event2) => {  //delegacion de eventos
+appNode.addEventListener ('click', (event2) => {  ç//delegacion de eventos
     if(event2.target.nodeName === 'H2'){
         window.alert('sup2')
 
